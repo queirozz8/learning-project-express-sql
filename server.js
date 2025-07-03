@@ -48,3 +48,16 @@ app.route('/api/users')
     }
   }
 )
+
+app.get('/api/users/:id_user', ((req, res) => {
+  const { id_user } = req.params
+  try {
+    // Prepara a query para buscar um usuário pelo ID
+    const stmt = db.prepare('SELECT * FROM users WHERE id = ?')
+    const user = stmt.get(id_user)
+    if (!user) return res.status(404).json({ error: 'User not found' })
+    res.json(user)
+  } catch (error) {
+    return res.status(500).json({ error: 'Error at getting user.' })
+  }
+}))
