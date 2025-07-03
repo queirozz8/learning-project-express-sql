@@ -3,7 +3,7 @@
 
 import axios from "axios";
 
-const url = 'http://localhost:3001/api/users'; // URL do servidor que gerencia os usuários
+const url = 'http://localhost:3000/api/users'; // URL do servidor que gerencia os usuários
 /// Usuário que será criado (ainda não está completo, visto que o avatar será preenchido depois)
 let user = {
   nome: 'Rick',

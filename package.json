@@ -6,7 +6,7 @@
   "main": "server.js",
   "scripts": {
     "server": "node server.js",
-    "main": "node main.js"
+    "client": "node client.js"
   },
   "keywords": [],
   "author": "queirozz8",
